@@ -54,5 +54,9 @@ function renderToys(toy) {
 }
 
 function likes() {
-  
+  let button = document.getElementsByClassName('like-btn')
+    button.addEventListener('click', (event) => {
+      event.preventDefault()
+      console.log('Hey')
+    })
 }
