@@ -53,10 +53,20 @@ function renderToys(toy) {
       toyCollection.appendChild(toyCardDiv)
 }
 
-function likes() {
-  let button = document.getElementsByClassName('like-btn')
-    button.addEventListener('click', (event) => {
+function likes(event) {
+  // let button = document.getElementsByClassName('like-btn')
+//     button.addEventListener('click', (event) => {
       event.preventDefault()
-      console.log('Hey')
+    fetch(`http://localhost:3000/toys/${event.target.id}`, {
+      method: 'PATCH', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(event),
     })
+    .then(response => response.json())
+    .then(toy => {
+      console.log(toy)
+    })
+  
 }

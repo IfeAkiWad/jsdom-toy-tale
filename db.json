@@ -10,7 +10,8 @@
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 8,
+      "isTrusted": true
     },
     {
       "id": 3,
